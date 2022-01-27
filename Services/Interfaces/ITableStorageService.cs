@@ -2,7 +2,7 @@
 
 namespace Services.Interfaces
 {
-    public interface INoSqlStorage<TEntity>
+    public interface ITableStorageService<TEntity>
     {
         Task<TEntity> GetSingle(string rowKey, string partitionKey);
         IQueryable<TEntity> GetAll();

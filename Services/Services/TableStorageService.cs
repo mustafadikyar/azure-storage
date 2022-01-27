@@ -5,7 +5,7 @@ using System.Linq.Expressions;
 
 namespace Services.Services
 {
-    public class TableStorageService<TEntity> : INoSqlStorage<TEntity> where TEntity : TableEntity, new()
+    public class TableStorageService<TEntity> : ITableStorageService<TEntity> where TEntity : TableEntity, new()
     {
         private readonly CloudTableClient _client;
         private readonly CloudTable _table;

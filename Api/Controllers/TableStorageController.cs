@@ -8,8 +8,8 @@ namespace Api.Controllers
     [ApiController]
     public class TableStorageController : ControllerBase
     {
-        private readonly INoSqlStorage<Product> _noSqlStorage;
-        public TableStorageController(INoSqlStorage<Product> noSqlStorage) => _noSqlStorage = noSqlStorage;
+        private readonly ITableStorageService<Product> _noSqlStorage;
+        public TableStorageController(ITableStorageService<Product> noSqlStorage) => _noSqlStorage = noSqlStorage;
 
         [HttpGet]
         public IActionResult GetAll()
